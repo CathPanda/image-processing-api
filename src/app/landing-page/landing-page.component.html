@@ -1,0 +1,25 @@
+<form (ngSubmit)="onSubmit()">
+    <label for="image-select">Select an image:</label>
+    <select id="image-select" [(ngModel)]="selectedImage" name="image-select">
+        <option value="encenadaport.jpg">encenadaport</option>
+        <option value="fjord.jpg">fjord</option>
+        <option value="icelandwaterfall.jpg">icelandwaterfall</option>
+        <option value="palmtunnel.jpg">palmtunnel</option>
+        <option value="santamonica.jpg">santamonica</option>
+    </select>
+    <br><br>
+    <label>
+        Height:
+        <input type="number" name="height" [(ngModel)]="height">
+    </label>
+    <br><br>
+    <label>
+        Width:
+        <input type="number" name="width" [(ngModel)]="width">
+    </label>
+    <br><br>
+    <button type="submit" (click)="onSubmit()">Resize</button>
+</form>
+<br><br>
+<img [src]="imageUrl" *ngIf="imageUrl">
+
